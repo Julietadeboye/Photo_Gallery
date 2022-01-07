@@ -13,7 +13,7 @@ const Button = styled.button`
   color: white;
   border-radius: 5px;
   border: none;
-  background-color: rgb(4, 100, 243);
+  background-color: rgb(119, 114, 114);
 
   &:hover {
     color: rgb(255, 255, 255);
@@ -80,7 +80,7 @@ export const Result = () => {
         display="flex"
         paddingY="10px"
         paddingX="20px"
-        marginBottom="30px"
+        marginBottom="15px"
       >
 
         <Input
