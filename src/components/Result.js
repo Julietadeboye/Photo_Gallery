@@ -36,9 +36,6 @@ const Input = styled.input`
   border-radius: 5px;
   width: 1500px;
   height: 36px;
-  
-
-  
 `;
 
 const Name = styled.p`
@@ -47,7 +44,7 @@ const Name = styled.p`
 
 export const Result = () => {
   const [image, setImage] = useState("");
-  const clientId = "99tTUICyeDVwWdEm-aXu3ytYA2AjV7LoGdci8Gv1nEg";
+  const clientId = process.env.REACT_APP_ACCESSKEY;
   const [result, setResult] = useState([]);
   const isMobile = useMediaQuery({ query: "(max-width: 700px)" });
 
@@ -76,13 +73,7 @@ export const Result = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Box
-        display="flex"
-        paddingY="10px"
-        paddingX="20px"
-        marginBottom="15px"
-      >
-
+      <Box display="flex" paddingY="10px" paddingX="20px" marginBottom="15px">
         <Input
           onChange={handleChange}
           type="text"
@@ -100,11 +91,10 @@ export const Result = () => {
         gridColumnGap="5px"
         gridTemplateColumns="auto auto auto"
         width="auto"
-        height="auto"
       >
         {result.map((image) => (
           <>
-            <Box padding="5px" width="auto" height="auto">
+            <Box padding="5px" width="auto">
               <Img src={image.urls.small} />
               <Name> Photo by {image.user.name}</Name>
               <p className="like">👍 {image.likes}</p>
