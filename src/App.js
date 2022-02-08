@@ -3,6 +3,7 @@ import { Gallery } from "./components/Gallery";
 import { Result } from "./components/Result";
 import { Header } from "./components/Header";
 import React, { useState, useEffect } from "react";
+
 import axios from "axios";
 
 function App() {
@@ -18,17 +19,19 @@ function App() {
         console.log(res.data);
         setImages([...images, ...res.data]);
       });
-  }, []);
+  }, [images, clientId]);
 
   return (
     <div className="App">
       <Header />
-      <Result />
+
       <div className="gallery">
         {images.map((image) => (
           <Gallery url={image.urls.small} key={image.id} />
         ))}
       </div>
+
+      <Result />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  }
+}
 
 .App {
   text-align: center;
@@ -10,12 +10,18 @@
   width: 100%;
 }
 
-.gallery{
+.gallery {
   width: 80%;
   margin: 0 auto;
-  padding-top: 20px;
+  padding: 20px;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
 }
 
-.random{
+.random {
   color: rgb(119, 114, 114);
 }

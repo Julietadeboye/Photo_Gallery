@@ -1,7 +1,7 @@
 import React from "react";
 // import "../App.css";
 import styled from "@emotion/styled";
-import Box from "ui-box";
+
 import Image from "./images/header-img.jpg";
 
 const Head = styled.div`
