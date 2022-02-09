@@ -11,14 +11,15 @@ display:flex;
 export const Gallery = ({ url, key }) => {
   return (
     <Box
-    display='inline-flex'
+    display='flex'
     justifyContent='center'
     alignItems='center'
-    padding='5px'
-    margin='5px'
+    padding='10px'
+    marginBottom='5px'
      
     >
-      <Img src={url} key={key} alt="" />;
+      <Img src={url} key={key} alt="" className="pics" />
+      
     </Box>
   );
 };

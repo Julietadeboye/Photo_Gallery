@@ -11,9 +11,9 @@
 }
 
 .gallery {
-  width: 80%;
+  width: 63%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 0;
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
@@ -22,6 +22,105 @@
   column-width: 33%;
 }
 
+.gallery .pics {
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+  cursor: pointer;
+  margin-bottom: 7px;
+}
+
 .random {
   color: rgb(119, 114, 114);
+}
+
+@media screen and (max-width: 1970px) {
+  .gallery .pics {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1915px) {
+  .gallery {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1750px) {
+  .gallery {
+    width: 73%;
+  }
+}
+
+@media screen and (max-width: 1680px) {
+  .gallery {
+    width: 77%;
+  }
+}
+
+@media screen and (max-width: 1590px) {
+  .gallery {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .gallery {
+    width: 58%;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .gallery {
+    width: 61%;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .gallery {
+    width: 67%;
+  }
+}
+
+@media screen and (max-width: 1237px) {
+  .gallery {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1161px) {
+  .gallery {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  .gallery {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 956px) {
+  .gallery {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .gallery {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
+  }
 }

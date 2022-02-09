@@ -40,6 +40,13 @@ const Input = styled.input`
 
 const Name = styled.p`
   width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  color:rgb(119, 114, 114);
+`;
+
+const Like = styled.p`
+margin-right: 5px;
 `;
 
 export const Result = () => {
@@ -73,7 +80,7 @@ export const Result = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Box display="flex" paddingY="10px" paddingX="20px" marginBottom="15px">
+      <Box display="flex" >
         <Input
           onChange={handleChange}
           type="text"
@@ -96,8 +103,11 @@ export const Result = () => {
           <>
             <Box padding="5px" width="auto">
               <Img src={image.urls.small} />
-              <Name> Photo by {image.user.name}</Name>
-              <p className="like">👍 {image.likes}</p>
+              <Box display="flex" justifyContent="space-between" >
+                <Name> Photo by {image.user.name}</Name>
+              <Like className="like">👍 {image.likes}</Like>
+              </Box>
+              
             </Box>
           </>
         ))}
