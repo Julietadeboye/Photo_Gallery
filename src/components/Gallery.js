@@ -9,6 +9,9 @@ display:flex;
 `;
 
 export const Gallery = ({ url, key }) => {
+  const getImg = (urls) => {
+    
+  }
   return (
     <Box
     display='flex'
@@ -16,7 +19,7 @@ export const Gallery = ({ url, key }) => {
     alignItems='center'
     padding='10px'
     marginBottom='5px'
-     
+     onClick={() => getImg(image.urls) }
     >
       <Img src={url} key={key} alt="" className="pics" />
       

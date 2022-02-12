@@ -7,8 +7,6 @@ import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 import InfiniteScroll from 'react-infinite-scroll-component';
-
-import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 
 // Style
@@ -22,15 +20,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: sans-serif;
   }
 `;
-
-// const WrapperImages = styled.section`
-//   max-width: 70rem;
-//   margin: 4rem auto;
-//   display: grid;
-//   grid-gap: 1em;
-//   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-//   grid-auto-rows: 300px;
-// `;
 
 function App() {
   const [images, setImages] = useState([]);
@@ -53,15 +42,6 @@ function App() {
       })
   }
 
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       `https://api.unsplash.com/photos/random?client_id=${clientId}&count=50`
-  //     )
-  //     .then((res) => {
-  //       setImages([...images, ...res.data]);
-  //     });
-  // }, []);
 
   return (
     <div className="App">

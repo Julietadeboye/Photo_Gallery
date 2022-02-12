@@ -8,7 +8,7 @@ const Head = styled.div`
   background-image: url(${Image});
   width: 100%;
   height: 350px;
-  color: white;
+  color: rgba(119, 114, 114, 0.8);
   display:flex;
   justify-content: center;
   align-items: center;

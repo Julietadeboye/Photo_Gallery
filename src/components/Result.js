@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 import axios from "axios";
 import { useState } from "react";
 import styled from "@emotion/styled";
@@ -73,13 +74,7 @@ export const Result = () => {
   };
 
   return (
-    <Box
-      display="flex"
-      paddingTop="50px"
-      flexDirection="column"
-      justifyContent="center"
-      alignItems="center"
-    >
+    <Box >
       <Box display="flex" >
         <Input
           onChange={handleChange}
@@ -93,16 +88,12 @@ export const Result = () => {
         </Button>
       </Box>
 
-      <Box
-        display={isMobile ? "flex" : "grid"}
-        gridColumnGap="5px"
-        gridTemplateColumns="auto auto auto"
-        width="auto"
+      <Box className ="gallery"
       >
         {result.map((image) => (
           <>
             <Box padding="5px" width="auto">
-              <Img src={image.urls.small} />
+              <Img src={image.urls.small} className="pics" />
               <Box display="flex" justifyContent="space-between" >
                 <Name> Photo by {image.user.name}</Name>
               <Like className="like">👍 {image.likes}</Like>
